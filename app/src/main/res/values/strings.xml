@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name" translatable="false">My weather Application</string>
+    <string name="greetings">Weather for today!</string>
+    <string name="greetings_land">Weather only for today!</string>
+    <string name="saint_pitersburg">Saint Pitersburg</string>
+    <string name="_7" translatable="false">+7С</string>
+    <string name="_SUN" translatable="false">SUN</string>
+    <string name="BACKGROUND" translatable="false">BACKGROUND</string>
+    <string name="BACKGROUND_land" translatable="false">BACKGROUND</string>
+</resources>

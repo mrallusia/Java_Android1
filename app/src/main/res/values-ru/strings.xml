@@ -1,0 +1,5 @@
+<resources>
+    <string name="greetings">Погода на сегодня!</string>
+    <string name="greetings_land">Погода только на сегодня!</string>
+    <string name="saint_pitersburg">Санкт-Петербург</string>
+</resources>
