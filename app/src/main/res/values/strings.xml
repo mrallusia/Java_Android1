@@ -1,8 +1,14 @@
 <resources>
     <string name="app_name" translatable="false">My weather Application</string>
     <string name="greetings">Weather for today!</string>
+    <string name="optionscreen">Option</string>
     <string name="greetings_land">Weather only for today!</string>
     <string name="saint_pitersburg">Saint Pitersburg</string>
+    <string name="night_theme">night theme on/of </string>
+    <string name="choose_city">Choose city</string>
+    <string name="wind_speed">Display wind speed?</string>
+    <string name="Pressure">Display pressure?</string>
+    <string name="btn_back">Back</string>
     <string name="_7" translatable="false">+7С</string>
     <string name="_SUN" translatable="false">SUN</string>
     <string name="BACKGROUND" translatable="false">BACKGROUND</string>
