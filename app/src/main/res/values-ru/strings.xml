@@ -6,6 +6,8 @@
     <string name="choose_city">Выберите город </string>
     <string name="wind_speed">Отображать скорость ветра?</string>
     <string name="Pressure">Отображать давление?</string>
-    <string name="btn_back">Назад</string>
+    <string name="btn_back">Перейти на гланвый экран</string>
     <string name="saint_pitersburg">Санкт-Петербург</string>
+    <string name="to_choose_city">К выбору города...</string>
+    <string name="temprature">Температура</string>
 </resources>
