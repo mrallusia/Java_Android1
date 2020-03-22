@@ -8,9 +8,11 @@
     <string name="choose_city">Choose city</string>
     <string name="wind_speed">Display wind speed?</string>
     <string name="Pressure">Display pressure?</string>
-    <string name="btn_back">Back</string>
+    <string name="btn_back">Back to main screen</string>
     <string name="_7" translatable="false">+7С</string>
     <string name="_SUN" translatable="false">SUN</string>
     <string name="BACKGROUND" translatable="false">BACKGROUND</string>
     <string name="BACKGROUND_land" translatable="false">BACKGROUND</string>
+    <string name="to_choose_city">To choose city...</string>
+    <string name="temprature">temprature</string>
 </resources>

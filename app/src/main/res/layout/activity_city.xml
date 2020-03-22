@@ -29,13 +29,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="74dp"
                 android:inputType="textPersonName"
-                android:text="@string/choose_city"
                 android:ems="10"
                 android:id="@+id/editText" android:layout_marginTop="64dp"
                 app:layout_constraintTop_toBottomOf="@+id/textView7" android:layout_marginStart="8dp"
                 app:layout_constraintStart_toStartOf="parent" android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.498"
-                android:textSize="18sp"/>
+                android:textSize="18sp" android:hint="@string/choose_city"/>
         <CheckBox
                 android:text="@string/wind_speed"
                 android:layout_width="wrap_content"
@@ -57,5 +56,14 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/button2" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp" app:layout_constraintBottom_toBottomOf="parent"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/editText2" android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@+id/checkBox" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toEndOf="@+id/checkBox"
+                android:layout_marginStart="8dp" android:hint="@string/temprature"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

@@ -1,26 +1,29 @@
 package com.mrallusia.myweatherapplication;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
-    private TextView textView;
-    private TextView textViewTemperature;
-    private Button backToCityScreen;
+public class CityActivity extends AppCompatActivity {
+    private EditText editText;
+    private EditText editTextTemperature;
+    private Button startSecondActivityButton;
+
+    static final String DATA_KEY = "data_key";
+    static final String TEMPERATURE_KEY = "temperature_key";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_city);
 
         initViews();
-        setTextFromCityActivity();
-        setOnBackBtnClickBehavior();
+        setOnStartSecondActivityBtnClick();
 
         String instanceState;
         if (savedInstanceState == null) {
@@ -29,29 +32,22 @@ public class MainActivity extends AppCompatActivity {
             instanceState = "Повторный запуск!";
         }
         Toast.makeText(getApplicationContext(), instanceState + " - onCreate()", Toast.LENGTH_SHORT).show();
-        System.out.println("- onCreate()");
-
     }
 
     private void initViews() {
-        textView = findViewById(R.id.textView2);
-        textViewTemperature = findViewById(R.id.textView3);
-        backToCityScreen = findViewById(R.id.button3);
+        editText = findViewById(R.id.editText);
+        editTextTemperature = findViewById(R.id.editText2);
+        startSecondActivityButton = findViewById(R.id.button2);
     }
 
-    private void setTextFromCityActivity() {
-        String text = getIntent().getStringExtra(CityActivity.DATA_KEY);
-        textView.setText(text);
-        String textTemperature = getIntent().getStringExtra(CityActivity.TEMPERATURE_KEY);
-        textViewTemperature.setText("+" + textTemperature);
-
-    }
-
-    private void setOnBackBtnClickBehavior() {
-        backToCityScreen.setOnClickListener(new View.OnClickListener() {
+    private void setOnStartSecondActivityBtnClick() {
+        startSecondActivityButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                Intent intent = new Intent(CityActivity.this, MainActivity.class);
+                intent.putExtra(DATA_KEY, editText.getText().toString());
+                intent.putExtra(TEMPERATURE_KEY, editTextTemperature.getText().toString());
+                startActivity(intent);
             }
         });
     }
@@ -60,42 +56,38 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Toast.makeText(getApplicationContext(), "onStart()", Toast.LENGTH_SHORT).show();
-        System.out.println("onStart");
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle saveInstanceState) {
         super.onRestoreInstanceState(saveInstanceState);
         Toast.makeText(getApplicationContext(), "Повторный запуск!! - onRestoreInstanceState()", Toast.LENGTH_SHORT).show();
-        System.out.println("Повторный запуск!! - onRestoreInstanceState()");
+
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Toast.makeText(getApplicationContext(), "onResume()", Toast.LENGTH_SHORT).show();
-        System.out.println("onResume()");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
         Toast.makeText(getApplicationContext(), "onPause()", Toast.LENGTH_SHORT).show();
-        System.out.println("onPause()");
     }
 
     @Override
-    protected void onSaveInstanceState(Bundle saveInstanceState) {
+    protected void onSaveInstanceState(@NonNull Bundle saveInstanceState) {
         super.onSaveInstanceState(saveInstanceState);
         Toast.makeText(getApplicationContext(), "onSaveInstanceState()", Toast.LENGTH_SHORT).show();
-        System.out.println("onSaveInstanceState()");
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         Toast.makeText(getApplicationContext(), "onStop()", Toast.LENGTH_SHORT).show();
-        System.out.println("onStop()");
     }
 }
 
